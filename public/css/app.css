@@ -1,0 +1,102 @@
+h4,
+h5,
+h6,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 100%;
+  overflow-x: hidden;
+}
+
+body a {
+  transition: 0.5s all ease;
+  -webkit-transition: 0.5s all ease;
+  -moz-transition: 0.5s all ease;
+  -o-transition: 0.5s all ease;
+  -ms-transition: 0.5s all ease;
+  text-decoration: none;
+}
+
+body a :hover {
+  text-decoration: none;
+}
+
+ul,
+label {
+  padding: 0;
+}
+
+/* notification*/
+
+#top_menu .nav > li,
+ul.top_menu > li {
+  float: left;
+}
+
+.brand {
+  background: #8b5c7e;
+  float: left;
+  width: 240px;
+  height: 80px;
+  position: relative;
+}
+
+.brand .logo {
+  font-size: 32px;
+  color: #fff;
+  float: left;
+  margin: 20px 0 0 25px;
+  text-transform: uppercase;
+}
+
+/*notification*/
+
+#top_menu .nav > li,
+ul.top_menu > li {
+  float: left;
+}
+
+.notify-row {
+  float: left;
+  margin-top: 23px;
+  margin-left: 25px;
+}
+
+.notify-row .badge {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  z-index: 100;
+}
+
+ul.top_menu {
+  margin-right: 15px;
+  margin-top: 0;
+}
+
+ul.top_menu li a {
+  color: #fff;
+  font-size: 16px;
+  background: #8b5c7e;
+  padding: 4px 8px;
+  margin-right: 15px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  padding-right: 8px !important;
+}
+
