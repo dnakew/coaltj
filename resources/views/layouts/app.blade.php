@@ -1,38 +1,45 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="{{ app()->getLocale() }}">
 <head>
-<title>{{ app()->getLocale() }}</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="" />
+	<title>@yield('title', 'CoalTJ') Coal-办公辅助</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> -->
+	<meta name="keywords" content="" />
+
+	<!-- CSRF Token -->
+	<meta name="csrf-token" content="{{ csrf_token() }}">
+
+
+
+	<!-- bootstrap-css -->
+	<!-- <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css"> -->
+	<link rel="stylesheet" href="{{ asset('css/bootstrap-3.3.4.css')}}">
+	<!-- //bootstrap-css -->
+
+	<!-- Custom CSS -->
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<link href="css/style-responsive.css" rel="stylesheet"/>
+	<!-- font-awesome icons -->
+	<link rel="stylesheet" href="css/font.css" type="text/css"/>
+	<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
+	<link rel="stylesheet" href="css/morris.css" type="text/css"/>
+	<!-- calendar -->
+	<link rel="stylesheet" href="css/monthly.css">
+	<!-- //calendar -->
+	<!-- //font-awesome icons -->
+
+</head>
+
+<!-- Scripts -->
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- bootstrap-css -->
-<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
-<!-- //bootstrap-css -->
-<!-- Custom CSS -->
-<link href="css/style.css" rel='stylesheet' type='text/css' />
-<link href="css/style-responsive.css" rel="stylesheet"/>
-<!-- font-awesome icons -->
-<link rel="stylesheet" href="css/font.css" type="text/css"/>
-<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
-<link rel="stylesheet" href="css/morris.css" type="text/css"/>
-<!-- calendar -->
-<link rel="stylesheet" href="css/monthly.css">
-<!-- //calendar -->
-<!-- //font-awesome icons -->
+
 <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
 <script src="js/raphael-min.js"></script>
 <script src="js/morris.js"></script>
-</head>
-<body>
-<section id="container">
-<!-- Header -->
-@include('layouts._header')
-<!--sidebar start-->
-@include('layouts._sidebar')
-<!--main content start-->
-@yield('content')
 
-</section>
 <script src="js/bootstrap.js"></script>
 <script src="js/jquery.dcjqaccordion.2.7.js"></script>
 <script src="js/scripts.js"></script>
@@ -44,33 +51,33 @@
 <script>
 	$(document).ready(function() {
 		//BOX BUTTON SHOW AND CLOSE
-	   jQuery('.small-graph-box').hover(function() {
-		  jQuery(this).find('.box-button').fadeIn('fast');
-	   }, function() {
-		  jQuery(this).find('.box-button').fadeOut('fast');
-	   });
-	   jQuery('.small-graph-box .box-close').click(function() {
-		  jQuery(this).closest('.small-graph-box').fadeOut(200);
-		  return false;
-	   });
+		 jQuery('.small-graph-box').hover(function() {
+			jQuery(this).find('.box-button').fadeIn('fast');
+		 }, function() {
+			jQuery(this).find('.box-button').fadeOut('fast');
+		 });
+		 jQuery('.small-graph-box .box-close').click(function() {
+			jQuery(this).closest('.small-graph-box').fadeOut(200);
+			return false;
+		 });
 
-	    //CHARTS
-	    function gd(year, day, month) {
+			//CHARTS
+			function gd(year, day, month) {
 			return new Date(year, month - 1, day).getTime();
 		}
 
 		graphArea2 = Morris.Area({
 			element: 'hero-area',
 			padding: 10,
-        behaveLikeLine: true,
-        gridEnabled: false,
-        gridLineColor: '#dddddd',
-        axes: true,
-        resize: true,
-        smooth:true,
-        pointSize: 0,
-        lineWidth: 0,
-        fillOpacity:0.85,
+				behaveLikeLine: true,
+				gridEnabled: false,
+				gridLineColor: '#dddddd',
+				axes: true,
+				resize: true,
+				smooth:true,
+				pointSize: 0,
+				lineWidth: 0,
+				fillOpacity:0.85,
 			data: [
 				{period: '2015 Q1', iphone: 2668, ipad: null, itouch: 2649},
 				{period: '2015 Q2', iphone: 15780, ipad: 13799, itouch: 12051},
@@ -85,9 +92,9 @@
 			],
 			lineColors:['#eb6f6f','#926383','#eb6f6f'],
 			xkey: 'period',
-            redraw: true,
-            ykeys: ['iphone', 'ipad', 'itouch'],
-            labels: ['All Visitors', 'Returning Visitors', 'Unique Visitors'],
+						redraw: true,
+						ykeys: ['iphone', 'ipad', 'itouch'],
+						labels: ['All Visitors', 'Returning Visitors', 'Unique Visitors'],
 			pointSize: 2,
 			hideHover: 'auto',
 			resize: true
@@ -128,5 +135,15 @@
 		});
 	</script>
 	<!-- //calendar -->
+
+<body>
+	<section id="container">
+	<!-- Header -->
+	@include('layouts._header')
+	<!--sidebar start-->
+	@include('layouts._sidebar')
+	<!--main content start-->
+	@yield('content')
+	</section>
 </body>
 </html>

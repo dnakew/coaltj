@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', '创建')
 
 @section('content')
 <section id = 'main-content'>

@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', '首页')
 
 @section('content')
 <!--main content start-->
@@ -375,13 +376,8 @@
 					<div class="clearfix"> </div>
 				</div>
 </section>
- <!-- footer -->
-		  <div class="footer">
-			<div class="wthree-copyright">
-			  <p>Copyright &copy; 2017.Company name All rights reserved.</p>
-			</div>
-		  </div>
-  <!-- / footer -->
+<!-- footer -->
+@include('layouts._footer')
 </section>
 <!--main content end-->
 @stop
