@@ -6,6 +6,7 @@
 <section id="main-content">
 	<section class="wrapper">
 		<!-- //market-->
+	</div>
 		<div class="market-updates">
 			<div class="col-md-3 market-update-gd">
 				<div class="market-update-block clr-block-2">
@@ -14,7 +15,7 @@
 					</div>
 					 <div class="col-md-8 market-update-left">
 					 <h4>Visitors</h4>
-					<h3>13,500</h3>
+					<h5>{{$transport->ship_name}}/{{$transport->ship_voyage}}</h5>
 					<p>Other hand, we denounce</p>
 				  </div>
 				  <div class="clearfix"> </div>
